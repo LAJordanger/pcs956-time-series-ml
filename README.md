@@ -111,9 +111,29 @@ teaching repository. This public repo contains only the materials intended for o
 The materials for this module are being developed and refined during Spring 2026.
 
 - The main lecture notebook **TS1** is essentially ready for teaching, although minor tuning may still occur.
-- The companion notebook **PCS956-TS-companion_A** (basic EDA on time series) is expected to be available for the first lecture.
+- The companion notebook **PCS956-TS-companion_A** (basic inspection and EDA on time series, with constructed examples of missingness and level shifts, and a mini-project usage section) is ready to be used.
 
 Additional lectures (TS2, TS3) and companion notebooks (B/C) will be added or updated as the module progresses. Students should expect occasional updates to notebooks and example code, but the core methodological stance and learning outcomes are stable.
+
+---
+
+## Folder Structure and Formats
+
+In the public teaching repo, the main folders are:
+
+- `notebooks/` – Jupyter notebooks (`*.ipynb`) with **full code and narrative**.
+- `data/` – CSV files and other minimal datasets used in the examples.
+- `docs/` – exported HTML and PDF versions of selected notebooks for **viewing and printing**.
+
+Students who want to run the code and experiment with the examples
+should use the notebooks in `notebooks/` together with the data in
+`data/`. The HTML and PDF files in `docs/` are output-only views: they
+show the text, figures, and headings, but do **not** show or execute
+the underlying code cells.
+
+Minor formatting differences between HTML and PDF exports (for
+example, section numbering styles) are an artefact of the export tools
+and do not affect the substantive content.
 
 ---
 
@@ -125,7 +145,8 @@ TS1:
 
 - `PCS956-TS-companion_A`
   Inspection and exploratory analysis of time-series data: plotting, basic transformations,
-  simple decomposition, and data-quality checks.
+  simple decomposition, data-quality checks, constructed examples for missing values and level shifts,
+  and a closing section on how to use the templates in the mini-project.
 
 - `PCS956-TS-companion_B`
   Classical time-series models and simple forecasting baselines: AR/MA/ARIMA fits, persistence
