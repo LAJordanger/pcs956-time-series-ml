@@ -75,6 +75,7 @@ By the end of the module, students should be able to:
 - Classical forecasting models (AR/MA/ARIMA) and ML models with lagged features and exogenous variables.
 - Time series as supervised learning; feature engineering, windowing, and handling exogenous inputs.
 - Temporal validation, leakage, and robust evaluation on levels vs differences (including careful use of $R^2$, RMSE, MAE, MAPE).
+- Spectral views (periodograms) for seasonality and structure, and the limits of spectral methods for non-linear dependence.
 - Evaluating models relative to baselines and on appropriate transformed/original scales. Students are expected to compare ML models not only against each other but against simple statistical baselines and random-walk-like reference models.
 
 ### TS3 – Anomaly Detection, Concept Drift, Multivariate/Nonlinear Dependence, Explainability, Research Trends
@@ -87,7 +88,10 @@ By the end of the module, students should be able to:
 
 ### Time-Series Mini-Project
 
-- One dataset, one main question — **not necessarily forecasting**. Acceptable topics include forecasting, classification (e.g. seismic event type), anomaly/change-point detection, or simple structural modelling.
+- One dataset, one main question — **not necessarily forecasting**. Acceptable topics include forecasting,
+  classification (e.g. seismic event type), anomaly/change-point detection, or simple structural modelling.
+  The dataset should be suitable for sharing in this course (openly available, your own data that you are
+  allowed to share, or a synthetic/anonymised variant of restricted data).
 - At least one baseline + one main model.
 - Focus on narrative: data quality, transformations and how predictions are mapped back to the original series, assumptions, drift, multivariate/contextual features, and whether the model truly beats persistence and seasonal baselines (or other simple classifiers, in classification tasks).
 - Include a short critical reflection on the limits of the data, possible concept drift, and how sensitive conclusions are to assumptions about stationarity and transformations.
@@ -99,7 +103,10 @@ By the end of the module, students should be able to:
 This public repository is intended to host:
 
 - Selected lecture notebooks and example code for time-series ML (including TS1 and companion notebooks such as `PCS956-TS-companion_A/B/C`).
-- Minimal datasets or pointers to open datasets used in examples (for instance, publicly available climate, energy, or seismic data).
+- Minimal datasets or pointers to open datasets used in examples (for instance, publicly available
+  climate, energy, or seismic data, and selected historical teaching datasets exported from the `astsa`
+  R package). Students who use these in their mini-projects should clearly document their time coverage
+  and limitations.
 - Project guidelines and templates for the time-series mini-project.
 - Optional further-reading and online resources.
 
@@ -108,12 +115,17 @@ teaching repository. This public repo contains only the materials intended for o
 
 ### Current Status of Materials
 
-The materials for this module are being developed and refined during Spring 2026.
+The materials for this module are being maintained and refined during
+Autumn 2026.
 
-- The main lecture notebook **TS1** is essentially ready for teaching, although minor tuning may still occur.
+- The main lecture notebook **TS1** has been used in the first lecture and is stable, although minor tuning may still occur.
 - The companion notebook **PCS956-TS-companion_A** (basic inspection and EDA on time series, with constructed examples of missingness and level shifts, and a mini-project usage section) is ready to be used.
+- The lecture notebook **TS2** (forecasting baselines, classical/ML models, temporal validation, and spectral views) and the companion notebook **PCS956-TS-companion_B** (code templates for baselines, ARIMA, ML on lagged features, temporal splits, levels vs differences, and simple periodograms) are available and may receive minor updates during the course.
 
-Additional lectures (TS2, TS3) and companion notebooks (B/C) will be added or updated as the module progresses. Students should expect occasional updates to notebooks and example code, but the core methodological stance and learning outcomes are stable.
+The notebooks **TS3** and **PCS956-TS-companion_C** will be added as
+the module progresses. Students should expect occasional updates to
+these later notebooks and example code, but the core methodological
+stance and learning outcomes are stable.
 
 ---
 
@@ -149,12 +161,14 @@ TS1:
   and a closing section on how to use the templates in the mini-project.
 
 - `PCS956-TS-companion_B`
-  Classical time-series models and simple forecasting baselines: AR/MA/ARIMA fits, persistence
-  baselines, and examples of evaluation on levels vs differences.
+  Classical time-series models and simple forecasting baselines (mean, persistence, seasonal, simple AR),
+  AR/MA/ARIMA fits with residual checks, ML on lagged features (e.g. Random Forest), temporal splits,
+  examples of evaluation on levels vs differences, and simple spectral views via periodograms.
 
 - `PCS956-TS-companion_C`
-  Machine-learning methods for time series and time-aware validation schemes: supervised-learning
-  formulations with lagged features, walk-forward validation, and comparisons against baselines.
+  Additional machine-learning methods for time series and more advanced time-aware validation schemes:
+  extended supervised-learning formulations with lagged and exogenous features, walk-forward and
+  rolling-window validation, and further comparisons against baselines.
 
 These notebooks contain code templates for:
 
