@@ -166,9 +166,13 @@ TS1:
   examples of evaluation on levels vs differences, and simple spectral views via periodograms.
 
 - `PCS956-TS-companion_C`
-  Additional machine-learning methods for time series and more advanced time-aware validation schemes:
-  extended supervised-learning formulations with lagged and exogenous features, walk-forward and
-  rolling-window validation, and further comparisons against baselines.
+  Anomaly detection, concept drift, and multivariate/non-linear dependence, together with
+  ML models that use lagged and exogenous/contextual features. Includes code templates for
+  residual-based anomaly flags, block-wise performance monitoring for drift (with simulated
+  level and variance shifts), cross-correlation and Granger-style predictive tests, supervised
+  learning on lagged plus exogenous features (for example Random Forest), basic feature-importance
+  based explainability for tree-based models, and simulation scaffolding for anomaly and drift
+  studies.
 
 These notebooks contain code templates for:
 
